@@ -1,0 +1,68 @@
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^([^/]+)/$ $1.php
+#RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.php
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+#RewriteRule ^(.*)$ web2020/$1/ [R=301,L]
+
+RewriteEngine on
+RewriteRule ^$ /index.php [L]
+RewriteRule ^servicios/$ /servicios.php [L]
+RewriteRule ^nosotros/$ /nosotros.php [L]
+RewriteRule ^contacto/$ /contacto.php [L]
+RewriteRule ^cotizaciones/$ /cotizaciones.php [L]
+RewriteRule ^cumplimiento/$ /cumplimiento.php [L]
+RewriteRule ^sucursales/$ /sucursales.php [L]
+RewriteRule ^tabla_total/$ https://www.yrendague.com.py/tabla_total.php [L]
+RewriteRule ^tabla_cotiza/$ https://www.yrendague.com.py/tabla_cotiza.php [L]
+RewriteRule ^tabla_arbitraje/$ https://www.yrendague.com.py/tabla_arbitraje.php [L]
+
+RewriteRule ^en/$ /en/index.php [L]
+RewriteRule ^nosotros/en/$ /en/nosotros.php [L]
+RewriteRule ^servicios/en/$ /en/servicios.php [L]
+RewriteRule ^cotizaciones/en/$ /en/cotizaciones.php [L]
+RewriteRule ^cumplimiento/en/$ /en/cumplimiento.php [L]
+RewriteRule ^sucursales/en/$ /en/sucursales.php [L]
+RewriteRule ^tabla_total/en/$ https://www.yrendague.com.py/en/tabla_total.php [L]
+RewriteRule ^tabla_cotiza/en/$ https://www.yrendague.com.py/en/tabla_cotiza.php [L]
+RewriteRule ^tabla_arbitraje/en/$ https://www.yrendague.com.py/en/tabla_arbitraje.php [L]
+
+RewriteRule ^pt/$ /pt/index.php [L]
+RewriteRule ^nosotros/pt/$ /pt/nosotros.php [L]
+RewriteRule ^servicios/pt/$ /pt/servicios.php [L]
+RewriteRule ^cotizaciones/pt/$ /pt/cotizaciones.php [L]
+RewriteRule ^cumplimiento/pt/$ /pt/cumplimiento.php [L]
+RewriteRule ^sucursales/pt/$ /pt/sucursales.php [L]
+RewriteRule ^tabla_total/pt/$ https://www.yrendague.com.py/pt/tabla_total.php [L]
+RewriteRule ^tabla_cotiza/pt/$ https://www.yrendague.com.py/pt/tabla_cotiza.php [L]
+RewriteRule ^tabla_arbitraje/pt/$ https://www.yrendague.com.py/pt/tabla_arbitraje.php [L]
+
+
+
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 12 hours"
+ExpiresByType text/css "access plus 12 hours"
+ExpiresByType text/plain "access plus 12 hours"
+ExpiresByType image/gif "access plus 12 hours"
+ExpiresByType image/png "access plus 12 hours"
+ExpiresByType image/jpeg "access plus 12 hours"
+ExpiresByType image/x-icon "access plus 12 hours"
+ExpiresByType application/x-javascript "access plus 12 hours"
+ExpiresByType application/javascript "access plus 12 hours"
+ExpiresByType text/javascript "access plus 12 hours"
+ExpiresByType application/x-icon "access plus 12 hours"
+</IfModule>
+<IfModule mod_deflate.c>
+   <IfModule mod_filter.c>
+      AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/x-javascript
+   </IfModule>
+</IfModule>

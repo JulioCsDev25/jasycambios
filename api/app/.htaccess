@@ -1,0 +1,42 @@
+AuthName "Restricted Area"
+AuthType Basic
+AuthUserFile /opt/lampp/htdocs/yrendague/api/app/.htpasswd
+
+<Files "matriz.php">
+require valid-user
+require user admin
+</Files>
+
+<Files "ssj.php">
+require valid-user
+require user admin
+</Files>
+
+<Files "sne.php">
+require valid-user
+require user admin
+</Files>
+
+<Files "config.php">
+require valid-user
+require user admin
+</Files>
+
+<Files "utils.php">
+require valid-user
+require user admin
+</Files>
+
+<Files "histo.php">
+require valid-user
+require user admin
+</Files>
+
+<Files "pwd.php">
+require valid-user
+require user admin
+</Files>
+
+RewriteEngine on
+RewriteRule ^/app/cotizacion/$ https://www.yrendague.com.py/api/app/sne.php [L]
+

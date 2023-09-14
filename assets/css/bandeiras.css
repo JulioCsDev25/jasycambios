@@ -1,0 +1,93 @@
+.moneda {
+	display: inline-block;
+	background-image: url(../img/cotiz-icons.png);
+    width: 60px;
+    height: 40px;
+    margin: 0 4px;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    -webkit-box-shadow: 0 0 2px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 0 2px rgba(0,0,0,.3);
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+
+
+.moneda.dolarUs{
+background-position:0 0
+}
+.moneda.pesoAr{
+background-position:0 -40px
+}
+.moneda.real{
+background-position:0 -80px
+}
+.moneda.euro{
+background-position:0 -120px
+}
+.moneda.pesoUr{
+background-position:0 -160px
+}
+.moneda.pesoCh{
+background-position:0 -200px
+}
+.moneda.dolarCa{
+background-position:0 -240px
+}
+.moneda.libra{
+background-position:0 -280px
+}
+.moneda.franco{
+background-position:0 -320px
+}
+.moneda.yen{
+background-position:0 -360px
+}
+.moneda.pesoMx{
+background-position:0 -400px
+}
+.moneda.boliviano{
+background-position:0 -440px
+}
+.moneda.coronaNor{
+background-position:0 -480px
+}
+.moneda.pesoCo{
+background-position:0 -520px
+}
+.moneda.dolarAu{
+background-position:0 -560px
+}
+.moneda.coronaDan{
+background-position:0 -600px
+}
+.moneda.coronaSue{
+background-position:0 -640px
+}
+.moneda.ranSud{
+background-position:0 -680px
+}
+.moneda.yuan{
+background-position:0 -720px
+}
+.moneda.usTw{
+background-position:0 -760px
+}
+.moneda.usSg{
+background-position:0 -800px
+}
+.moneda.rublo{
+background-position:0 -840px
+}
+.moneda.shekel{
+background-position:0 -880px
+}
+.moneda.dinar{
+background-position:0 -920px
+}
+.moneda.guarani{
+background-position:0 -960px
+}
+.moneda.pen{
+background-position:0 -1000px
+}
